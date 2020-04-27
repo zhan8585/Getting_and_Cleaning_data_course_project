@@ -44,4 +44,4 @@ meansandstds$activities = gsub("6", "laying", meansandstds$activities)
 averages = meansandstds %>% group_by(subjects, activities) %>% summarize_all(mean)
 
 #write the new dataset to a new file
-write.table(averages, file = "averages_for_subjects_activities.txt")
+write.table(averages, file = "averages_for_subjects_activities.txt", row.names = F)
